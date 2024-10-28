@@ -1,17 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nbaral <nbaral@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/28 15:59:24 by nbaral            #+#    #+#             */
+/*   Updated: 2024/10/28 16:02:07 by nbaral           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while(lst)
-    {
-        lst = lst->next;
-        i++;
-    }
-    printf("%d\n", i);
-    return (i);
+	i = 0;
+	while (lst)
+	{
+		lst = lst->next;
+		i++;
+	}
+	printf("%d\n", i);
+	return (i);
 }
 
 // int main() {
@@ -33,6 +45,5 @@ int ft_lstsize(t_list *lst)
 //     // Free the list nodes (not shown here for brevity)
 //     // In a real scenario, you should free the allocated memory
 
-//     return 0;
+//     return (0);
 // }
-

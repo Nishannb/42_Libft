@@ -1,15 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nbaral <nbaral@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/28 16:01:02 by nbaral            #+#    #+#             */
+/*   Updated: 2024/10/28 16:01:29 by nbaral           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char* ft_toupper(char * str)
+char	*ft_toupper(char *str)
 {
-    while (*str != '\0')
-    {
-        if (*str >= 'a' && *str <= 'z')
-        {
-            *str = *str - 'a' + 'A';
-        }
-        str++;
-    }
-
-    return (str);
+	while (*str != '\0')
+	{
+		if (*str >= 'a' && *str <= 'z')
+		{
+			*str = *str - 'a' + 'A';
+		}
+		str++;
+	}
+	return (str);
 }

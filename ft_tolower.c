@@ -1,15 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nbaral <nbaral@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/28 16:01:00 by nbaral            #+#    #+#             */
+/*   Updated: 2024/10/28 16:01:00 by nbaral           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char* ft_tolower(char * str)
+char	*ft_tolower(char *str)
 {
-    while (*str != '\0')
-    {
-        if (*str >= 'A' && *str <= 'Z')
-        {
-            *str = *str - 'A' + 'a';
-        }
-        str++;
-    }
-
-    return (str);
+	while (*str != '\0')
+	{
+		if (*str >= 'A' && *str <= 'Z')
+		{
+			*str = *str - 'A' + 'a';
+		}
+		str++;
+	}
+	return (str);
 }

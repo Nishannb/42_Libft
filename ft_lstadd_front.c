@@ -1,16 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nbaral <nbaral@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/28 15:56:24 by nbaral            #+#    #+#             */
+/*   Updated: 2024/10/28 15:58:32 by nbaral           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 // Singly linked list
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    if (lst)
-    {
-        if (*lst)
-        {
-            new->next = *lst;
-        }
-        *lst = new;
-    }
+	if (lst)
+	{
+		if (*lst)
+		{
+			new->next = *lst;
+		}
+		*lst = new;
+	}
 }
 
 // void print_list(t_list *head) {
@@ -40,6 +52,5 @@ void ft_lstadd_front(t_list **lst, t_list *new)
 //     // Free the list nodes (not shown here for brevity)
 //     // In a real scenario, you should free the allocated memory
 
-//     return 0;
+//     return (0);
 // }
-

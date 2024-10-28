@@ -1,16 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nbaral <nbaral@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/28 15:59:05 by nbaral            #+#    #+#             */
+/*   Updated: 2024/10/28 15:59:06 by nbaral           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-    while (lst)
-    {
-        if(!lst->next)
-        {
-            return (lst);
-        }
-        lst = lst -> next;
-    }
-    return (lst);
+	while (lst)
+	{
+		if (!lst->next)
+		{
+			return (lst);
+		}
+		lst = lst->next;
+	}
+	return (lst);
 }
 
 // void print_list(t_list *head) {
@@ -41,7 +53,8 @@ t_list *ft_lstlast(t_list *lst)
 //     // Find and print the last node
 //     t_list *last_node = ft_lstlast(list);
 //     if (last_node) {
-//         printf("Last Node: %s\n", (char *)last_node->content); // Should print "Node3"
+//         printf("Last Node: %s\n", (char *)last_node->content);
+	// Should print "Node3"
 //     } else {
 //         printf("The list is empty.\n");
 //     }
@@ -49,5 +62,5 @@ t_list *ft_lstlast(t_list *lst)
 //     // Free allocated nodes (not shown here for brevity)
 //     // In a real scenario, you should free the allocated memory
 
-//     return 0;
+//     return (0);
 // }

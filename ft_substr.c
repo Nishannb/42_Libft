@@ -1,24 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nbaral <nbaral@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/28 16:00:57 by nbaral            #+#    #+#             */
+/*   Updated: 2024/10/28 16:06:09 by nbaral           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-size_t       ft_strlen(const char *str);
-size_t ft_strlcpy(char *dest, const char *src, size_t size);
+// size_t       ft_strlen(const char *str);
+// size_t ft_strlcpy(char *dest, const char *src, size_t size);
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char *substr;
+	char	*substr;
 
-    if(!s) return (0);
-    // s refers to the first element in s array
-    if(ft_strlen(s) < start)
-        len = 0;
-    if(ft_strlen(s + start) < len)
-        len = ft_strlen(s + start);
-    substr = malloc( (len + 1) * sizeof(char));
-    if (!substr)
-        return (NULL);
-    
-    ft_strlcpy(substr, s + start, len + 1);
-    return (substr);
+	if (!s)
+		return (0);
+	if (ft_strlen(s) < start)
+		len = 0;
+	if (ft_strlen(s + start) < len)
+		len = ft_strlen(s + start);
+	substr = malloc((len + 1) * sizeof(char));
+	if (!substr)
+		return (NULL);
+	ft_strlcpy(substr, s + start, len + 1);
+	return (substr);
 }
 
 // int main() {
@@ -34,5 +45,5 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 //     ft_substr("", 0, 5); // Empty string case
 //      printf("\n");
 
-//     return 0;
+//     return (0);
 // }

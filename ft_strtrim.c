@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nbaral <nbaral@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/28 16:00:54 by nbaral            #+#    #+#             */
+/*   Updated: 2024/10/28 16:00:55 by nbaral           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -23,7 +35,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
-
 // int main() {
 //     char *s1 = "   Hello, World!   ";
 //     char *set = " ";
@@ -35,7 +46,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 //     // Check if result is NULL (malloc failure)
 //     if (result == NULL) {
 //         printf("Memory allocation failed\n");
-//         return 1; // Exit with error
+//         return (1); // Exit with error
 //     }
 
 //     // Print the original and trimmed results
@@ -45,5 +56,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 //     // Free the allocated memory
 //     free(result);
 
-//     return 0; // Exit successfully
+//     return (0); // Exit successfully
 // }

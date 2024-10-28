@@ -1,32 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nbaral <nbaral@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/28 15:58:02 by nbaral            #+#    #+#             */
+/*   Updated: 2024/10/28 15:58:03 by nbaral           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
-    int i;
-    int neg;
-    int num;
+	int	i;
+	int	neg;
+	int	num;
 
-    i = 0;
-    neg = 1;
-    num = 0;
-    while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\n' 
-    || nptr[i] == '\r' || nptr[i] == '\v' || nptr[i] == '\f' )
-    {
-        i++;
-    }
-
-    while (nptr[i] == '-' || nptr[i] == '+')
-    {
-        if(nptr[i] == '-')
-            neg = neg * -1;
-        i++;
-    }
-    while(nptr[i] >= 48 && nptr[i] <= 57 )
-    {
-        num = num * 10 + (nptr[i] - 48);
-        i++;
-    }
-    return (num * neg);
+	i = 0;
+	neg = 1;
+	num = 0;
+	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\n'
+		|| nptr[i] == '\r' || nptr[i] == '\v' || nptr[i] == '\f')
+	{
+		i++;
+	}
+	while (nptr[i] == '-' || nptr[i] == '+')
+	{
+		if (nptr[i] == '-')
+			neg = neg * -1;
+		i++;
+	}
+	while (nptr[i] >= 48 && nptr[i] <= 57)
+	{
+		num = num * 10 + (nptr[i] - 48);
+		i++;
+	}
+	return (num * neg);
 }
 
 // int main() {
@@ -52,9 +63,11 @@ int ft_atoi(const char *nptr)
 //     printf("Testing ft_atoi:\n");
 //     for (int i = 0; test_cases[i] != NULL; i++) {
 //         int result = ft_atoi(test_cases[i]);
-//         int expected = atoi(test_cases[i]); // Using standard atoi for comparison
-//         printf("ft_atoi(\"%s\") = %d, expected = %d\n", test_cases[i], result, expected);
+//         int expected = atoi(test_cases[i]);
+	// Using standard atoi for comparison
+//         printf("ft_atoi(\"%s\") = %d, expected = %d\n", test_cases[i],
+	// result, expected);
 //     }
 
-//     return 0;
+//     return (0);
 // }

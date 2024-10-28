@@ -1,5 +1,16 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nbaral <nbaral@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/28 15:56:22 by nbaral            #+#    #+#             */
+/*   Updated: 2024/10/28 16:02:41 by nbaral           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
 
 static char	*ft_char(char *numtostr, unsigned int num, long int len)
 {
@@ -26,32 +37,32 @@ static long int	ft_len(int n)
 	return (len);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-        char *numtostr;
-        long int len;
-        unsigned int num;
+	char			*numtostr;
+	long int		len;
+	unsigned int	num;
 
-        len = ft_len(n);
-        numtostr = (char *)malloc(sizeof(char) * (len + 1));
-        if(!numtostr){
-          return (NULL);
-        }
-        numtostr[len--] = '\0';
-        if(n == 0){
-          numtostr[0] = '0';
-        }
-        if(n < 0)
-        {
-          num = n * -1;
-          numtostr[0] = '-';
-        }
-        else
-        {
-          num = n;
-        }
-        numtostr = ft_char(numtostr, num, len);
-        return (numtostr);
+	len = ft_len(n);
+	numtostr = (char *)malloc(sizeof(char) * (len + 1));
+	if (!numtostr)
+		return (NULL);
+	numtostr[len--] = '\0';
+	if (n == 0)
+	{
+		numtostr[0] = '0';
+	}
+	if (n < 0)
+	{
+		num = n * -1;
+		numtostr[0] = '-';
+	}
+	else
+	{
+		num = n;
+	}
+	numtostr = ft_char(numtostr, num, len);
+	return (numtostr);
 }
 
 // int main(void)
@@ -98,5 +109,5 @@ char *ft_itoa(int n)
 //         free(result);
 //     }
 
-//     return 0;
+//     return (0);
 // }

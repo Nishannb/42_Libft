@@ -1,26 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nbaral <nbaral@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/28 16:00:14 by nbaral            #+#    #+#             */
+/*   Updated: 2024/10/28 16:00:15 by nbaral           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-    char *newstr;
-    int len;
+	char	*newstr;
+	int		len;
+	char	*start;
 
-    len = ft_strlen(s);
-    newstr = (char *)malloc((len + 1) * sizeof(char));
-    if(!newstr)
-        return (NULL);
-    
-    char *start = newstr;
-    while (*s)
-    {
-        *newstr = *s;
-        newstr++;
-        s++;
-    }
-    *newstr = '\0';
-    return (start);
+	len = ft_strlen(s);
+	newstr = (char *)malloc((len + 1) * sizeof(char));
+	if (!newstr)
+		return (NULL);
+	start = newstr;
+	while (*s)
+	{
+		*newstr = *s;
+		newstr++;
+		s++;
+	}
+	*newstr = '\0';
+	return (start);
 }
-
 
 // int main() {
 //     const char *original = "Hello, World!";
@@ -29,7 +40,7 @@ char *ft_strdup(const char *s)
 //     char *ft_copy = ft_strdup(original);
 //     if (!ft_copy) {
 //         printf("ft_strdup: Memory allocation failed\n");
-//         return 1;
+//         return (1);
 //     }
 
 //     // Test standard strdup
@@ -37,7 +48,7 @@ char *ft_strdup(const char *s)
 //     if (!std_copy) {
 //         printf("strdup: Memory allocation failed\n");
 //         free(ft_copy);
-//         return 1;
+//         return (1);
 //     }
 
 //     // Compare results
@@ -56,5 +67,5 @@ char *ft_strdup(const char *s)
 //     free(ft_copy);
 //     free(std_copy);
 
-//     return 0;
+//     return (0);
 // }

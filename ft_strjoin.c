@@ -1,5 +1,16 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nbaral <nbaral@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/28 16:00:23 by nbaral            #+#    #+#             */
+/*   Updated: 2024/10/28 16:00:25 by nbaral           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -39,7 +50,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 //     // Check if result is NULL (malloc failure)
 //     if (result == NULL) {
 //         printf("Memory allocation failed\n");
-//         return 1; // Exit with error
+//         return (1); // Exit with error
 //     }
 
 //     // Print the concatenated result
@@ -48,5 +59,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 //     // Free the allocated memory
 //     free(result);
 
-//     return 0; // Exit successfully
+//     return (0); // Exit successfully
 // }
